@@ -3,7 +3,6 @@ import os
 import xml.etree.ElementTree as ET
 import math
 
-
 def slice(image, xml, size=(5, 2), path='', suffix=''):
 
     height, width = image.shape[:2]
@@ -67,10 +66,8 @@ def slice(image, xml, size=(5, 2), path='', suffix=''):
 
             if tree.find('object') != None:
 
-                tree.write(path + '/{}.xml'.format(str(r) + '_' + str(c) +
-                                                   '_' + str(size[0]) + '_' + str(size[1]) + '_' + suffix))
+                tree.write(path + '/{}.xml'.format(str(r) + '_' + str(c) + '_' + str(size[0]) + '_' + str(size[1]) + '_' + suffix))
 
                 tile = cv2.cvtColor(tile, cv2.COLOR_BGR2RGB)
 
-                cv2.imwrite(path + '/{}.jpg'.format(str(r) + '_' + str(c) + '_' + str(
-                    size[0]) + '_' + str(size[1]) + '_' + suffix), tile, [cv2.IMWRITE_JPEG_QUALITY, 95])
+                cv2.imwrite(path + '/{}.jpg'.format(str(r) + '_' + str(c) + '_' + str(size[0]) + '_' + str(size[1]) + '_' + suffix), tile, [cv2.IMWRITE_JPEG_QUALITY, 95])
