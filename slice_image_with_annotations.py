@@ -3,7 +3,7 @@ import os
 import xml.etree.ElementTree as ET
 import math
 
-def slice(image, xml, size=(5, 2), path='', suffix=''):
+def slice(image, xml, size=(2, 2), path='', suffix=''):
 
     height, width = image.shape[:2]
     wSize = int(math.ceil(float(height) / size[0]))
