@@ -47,8 +47,8 @@ def slice(image, xml, size=(2, 2), path='', suffix=''):
                 if(
                     xmin > x and xmax > x and
                     ymin > y and ymax > y and
-                    xmin < yy and xmax < yy and
-                    ymin < xx and ymax < xx
+                    xmin < xx and xmax < xx and
+                    ymin < yy and ymax < yy
                 ):
                     obj = ET.SubElement(annotation, 'object')
                     ET.SubElement(obj, 'name').text = member[0].text
